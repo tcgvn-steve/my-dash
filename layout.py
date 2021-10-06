@@ -1,5 +1,5 @@
 import dash
-import dash_html_components as html
+from dash import html
 import dash_admin_components as dac
 from dash.dependencies import Input, Output
 from dash import dcc
@@ -35,16 +35,23 @@ sidebar = dac.Sidebar(
         [
             dac.SidebarHeader(children="Members"),
             dcc.Link(children=dac.SidebarMenuItem(
-                id='tab_cards', label='Users', icon='box'), href='/users'),
+                id='tab_cards', label='Graph', icon='box'), href='/graph'),
+
+            # dac.SidebarMenuItem(
+            #     id='tab_cards1', label='Graph', icon='box'),
             dcc.Link(children=dac.SidebarMenuItem(id='tab_social_cards',
-                                                  label='Groups', icon='id-card'), href='/groups'),
+                                                  label='Chained Callback', icon='id-card'), href='/chained_callback'),
             dcc.Link(children=dac.SidebarMenuItem(id='tab_tab_cards',
-                                                  label='Permission', icon='image'), href='/permissions'),
+                                                  label='State', icon='image'), href='/state'),
             dac.SidebarHeader(children="Products"),
             dcc.Link(children=dac.SidebarMenuItem(id='tab_basic_boxes',
-                                                  label='products', icon='desktop'), href='/products'),
+                                                  label='dccDtore', icon='desktop'), href='/dcc_store'),
             dcc.Link(children=dac.SidebarMenuItem(id='tab_value_boxes',
                                                   label='Categories', icon='suitcase'), href='/categories'),
+            dcc.Link(children=dac.SidebarMenuItem(id='advanced_callback',
+                                                  label='Advanced Callback', icon='suitcase'), href='/advanced_callback'),
+            dcc.Link(children=dac.SidebarMenuItem(id='client_callback',
+                                                  label='Client Callback', icon='suitcase'), href='/client_callback'),
         ]
     ),
     title='Dash Admin',
