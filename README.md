@@ -36,8 +36,6 @@ sudo docker build -t my-dash:0.0.6 .
 sudo docker run -d -p 8050:8050 --name=my-dash my-dash:0.0.6
 gunicorn main:server --bind=0.0.0.0:8000
 
-docker build -t huyhoang1996ha/my-dash:0.0.1 .
-docker push huyhoang1996ha/my-dash:0.0.1
 ```
 
 
