@@ -1,5 +1,5 @@
 
-# Dash Framwork Project
+# Dash Framework Project
 
 ### Structure
 ```sh
