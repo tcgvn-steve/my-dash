@@ -33,9 +33,9 @@ navbar = dac.Navbar(color="white",
 sidebar = dac.Sidebar(
     dac.SidebarMenu(
         [
-            dac.SidebarHeader(children="Members"),
+            dac.SidebarHeader(children="Basic"),
             dcc.Link(children=dac.SidebarMenuItem(
-                id='tab_cards', label='Graph', icon='box'), href='/graph'),
+                id='tab_cards', label='Graph', icon='box', className='nav-padding'), href='/graph'),
 
             # dac.SidebarMenuItem(
             #     id='tab_cards1', label='Graph', icon='box'),
@@ -43,15 +43,20 @@ sidebar = dac.Sidebar(
                                                   label='Chained Callback', icon='id-card'), href='/chained_callback'),
             dcc.Link(children=dac.SidebarMenuItem(id='tab_tab_cards',
                                                   label='State', icon='image'), href='/state'),
-            dac.SidebarHeader(children="Products"),
             dcc.Link(children=dac.SidebarMenuItem(id='tab_basic_boxes',
                                                   label='dccDtore', icon='desktop'), href='/dcc_store'),
-            dcc.Link(children=dac.SidebarMenuItem(id='tab_value_boxes',
-                                                  label='Categories', icon='suitcase'), href='/categories'),
+            dac.SidebarHeader(children="Callback"),
+
             dcc.Link(children=dac.SidebarMenuItem(id='advanced_callback',
                                                   label='Advanced Callback', icon='suitcase'), href='/advanced_callback'),
             dcc.Link(children=dac.SidebarMenuItem(id='client_callback',
                                                   label='Client Callback', icon='suitcase'), href='/client_callback'),
+            dcc.Link(children=dac.SidebarMenuItem(id='pattern_callback_all',
+                                                  label='Pattern callback all', icon='suitcase'), href='/pattern_callback_all'),
+            dcc.Link(children=dac.SidebarMenuItem(id='pattern_callback_matchpattern_callback_match',
+                                                  label='Pattern callback match', icon='suitcase'), href='/pattern_callback_match'),
+            dcc.Link(children=dac.SidebarMenuItem(id='long_callback',
+                                                  label='Long Callback', icon='suitcase'), href='/long_callback'),
         ]
     ),
     title='Dash Admin',

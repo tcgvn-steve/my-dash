@@ -14,7 +14,7 @@ layout = html.Div([
 @app.callback(
     Output('output-state', 'children'),
     Input('submit-button-state', 'n_clicks'),
-    State('input-1-state', 'value'),
+    State('input-1-state', 'value'),  # State is input but don't trigger event
     State('input-2-state', 'value'),
 )
 def handle_with_state(n_clicks, value1, value2):

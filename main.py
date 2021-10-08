@@ -4,7 +4,9 @@ import dash_admin_components as dac
 from dash.dependencies import Input, Output
 from layout import navbar, sidebar, body, controlbar, footer
 from app import app
-from pages import graph, chained_callback, state, dcc_store, categories, advanced_callback, client_callback
+from pages import (graph, chained_callback, state, dcc_store, categories,
+                   advanced_callback, client_callback, pattern_callback_match, pattern_callback_all,
+                   long_callback)
 
 # =============================================================================
 # App Layout
@@ -40,6 +42,12 @@ def display(pathname):
         return advanced_callback.layout
     if pathname == '/client_callback':
         return client_callback.layout
+    if pathname == '/pattern_callback_match':
+        return pattern_callback_match.layout
+    if pathname == '/pattern_callback_all':
+        return pattern_callback_all.layout
+    if pathname == '/long_callback':
+        return long_callback.layout
     return '404'
 
 

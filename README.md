@@ -21,6 +21,8 @@ pip install -r requirements.txt
 ### Run app (DEV)
 ```sh
 python main.py
+gunicorn main:server --bind=0.0.0.0:8000
+
 ```
 
 ### Library
@@ -34,9 +36,11 @@ https://dash-bootstrap-components.opensource.faculty.ai/docs/components/alert/
 ```sh
 sudo docker build -t my-dash:0.0.6 .
 sudo docker run -d -p 8050:8050 --name=my-dash my-dash:0.0.6
-gunicorn main:server --bind=0.0.0.0:8000
-
+sudo docker build -t my-dash:0.0.6 .
 ```
+
+
+
 
 
 
