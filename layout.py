@@ -57,6 +57,10 @@ sidebar = dac.Sidebar(
                                                   label='Pattern callback match', icon='suitcase'), href='/pattern_callback_match'),
             dcc.Link(children=dac.SidebarMenuItem(id='long_callback',
                                                   label='Long Callback', icon='suitcase'), href='/long_callback'),
+            dac.SidebarHeader(children="Custom Component"),
+            dcc.Link(children=dac.SidebarMenuItem(id='timeline_component',
+                                                  label='Timeline Compopnent', icon='suitcase'), href='/timeline_component'),
+
         ]
     ),
     title='Dash Admin',

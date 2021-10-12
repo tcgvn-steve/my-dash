@@ -6,7 +6,7 @@ from layout import navbar, sidebar, body, controlbar, footer
 from app import app
 from pages import (graph, chained_callback, state, dcc_store, categories,
                    advanced_callback, client_callback, pattern_callback_match, pattern_callback_all,
-                   long_callback)
+                   long_callback, timeline_component)
 
 # =============================================================================
 # App Layout
@@ -48,6 +48,8 @@ def display(pathname):
         return pattern_callback_all.layout
     if pathname == '/long_callback':
         return long_callback.layout
+    if pathname == '/timeline_component':
+        return timeline_component.layout
     return '404'
 
 

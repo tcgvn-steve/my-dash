@@ -22,4 +22,7 @@ six==1.16.0
 tenacity==8.0.1
 Werkzeug==2.0.1
 gunicorn
-diskcache multiprocess psutil
+diskcache 
+multiprocess 
+psutil
+custom_components-0.0.1.tar.gz

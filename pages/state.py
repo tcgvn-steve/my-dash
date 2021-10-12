@@ -7,7 +7,7 @@ layout = html.Div([
     dcc.Input(id='input-1-state', type='text', value='Montréal'),
     dcc.Input(id='input-2-state', type='text', value='Canada'),
     html.Button(id='submit-button-state', n_clicks=0, children='Submit'),
-    html.Div(id='output-state')
+    html.Div(id='output-state'),
 ])
 
 
