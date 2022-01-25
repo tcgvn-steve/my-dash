@@ -9,6 +9,8 @@ jobs:
   check-bats-version: #name job
     runs-on: ubuntu-latest
     steps:
+      - run: ls -a
       - uses: actions/checkout@v2 
+      - run: ls -a
       - run: python -V
   
