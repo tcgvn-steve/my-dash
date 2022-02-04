@@ -1,6 +1,6 @@
 FROM python:3.8-slim
 
-WORKDIR /code
+WORKDIR /proj
 
 COPY *.tar.gz ./
 
@@ -13,6 +13,6 @@ COPY ./ ./
 
 ENV ENVIRONMENT_FILE=".env"
 
-EXPOSE 8050
+EXPOSE 8061
 
 ENTRYPOINT ["gunicorn", "--config", "gunicorn_config.py", "main:server"]

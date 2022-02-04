@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  dash_app:
+    image: steve/proj_dash:dev
+    restart: always
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    expose:
+      - 8061
+    ports:
+      - 8061:8061
+    volumes:
+      - .:/proj/.

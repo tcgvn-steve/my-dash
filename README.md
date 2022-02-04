@@ -44,7 +44,8 @@ sudo docker run -d -p 8050:8050 --name=my-dash huyhoang1996ha/my-dash:0.0.5
 ```
 
 
-
+### Run docker compose
+docker-compose -f docker-compose.yml up -d --build --force-recreate
 
 
 
