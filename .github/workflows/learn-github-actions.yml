@@ -18,7 +18,9 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: | # run with multiple script
-            cd /home/
+            cd /home/steve/
+            mkdir my-dash
+            cd my-dash
             git clone https://github.com/tcgvn-steve/my-dash
             docker ps
     - run: ls -a
