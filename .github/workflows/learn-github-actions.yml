@@ -17,10 +17,12 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: ls -a
+        script: | # run with multiple script
+            cd /home/
+            git clone https://github.com/tcgvn-steve/my-dash
+            docker ps
     - run: ls -a
-    - uses: actions/checkout@v2 
+    - uses: actions/checkout@v2
     - run: ls -a
-    - run: cd my-dash/
     - run: docker ps
     
