@@ -21,6 +21,8 @@ jobs:
             cd /home/team
             git clone https://github.com/tcgvn-steve/my-dash
             cd my-dash
+            git pull origin master
+            ls -a
             docker-compose -f docker-compose.yml up -d --build --force-recreate
             docker ps
     - run: ls -a
