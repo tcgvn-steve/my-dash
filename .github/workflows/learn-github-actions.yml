@@ -20,6 +20,8 @@ jobs:
         script: | # run with multiple script
             cd /home/team
             git clone https://github.com/tcgvn-steve/my-dash
+            cd my-dash
+            docker-compose -f docker-compose.yml up -d --build --force-recreate
             docker ps
     - run: ls -a
     - uses: actions/checkout@v2
